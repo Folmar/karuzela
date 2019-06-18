@@ -34,8 +34,8 @@ public class FifoQueue {
     public Node pop() {
         Node tmpPopNode = head; //zmienna pomocnicza po to żeby ustawić wartość heada na następna czyli getNext
         head = head.getNext();
-        tmpPopNode.setNext(null);
         size--;
+        tmpPopNode.setNext(null);//odcięcie zmiennej pomocniczej od całej kolejki
         return tmpPopNode;
     }
 
@@ -52,5 +52,12 @@ public class FifoQueue {
     //Pamiętaj że ludzie chcacy przejechać się na atrakcji ustawiają się wkolejce
     //Na karuzelę moze wejść tylko jedna osoba na raz - ta która jest pirwsza w kolejce
     //z przyczyn technicznych program musi
+
+
+    //ZADANIE DOMOWE
+    //Zrobić obsługę wyjątków - np. kolejka jest pusta a nie null pointer exception
+    //Napisać w Listach (poprzednie zajęcia) na podstawie popa usuwanie dowolnego elementu z listy - jako parametr metody delete przyjmujemy indeks usuwanego elementu
+    //PODPOWIEDZ: można zerknąc do implementacji ArrayLinkedList
+    //Stworzyć kolejkę LIFO - ściągamy ostatni element
 }
 

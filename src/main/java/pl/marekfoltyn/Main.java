@@ -13,7 +13,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         FifoQueue fifoQueue = new FifoQueue();
         while (true) {
-            System.out.println("===Menu====");
+            System.out.println("==== Menu ====");
             System.out.println("1. Dodaj do kolejki");
             System.out.println("2. Zdejmij z kolejki");
             Integer option = scanner.nextInt();
