@@ -31,12 +31,16 @@ public class FifoQueue {
      *
      * @return
      */
-    public Node pop() {
+    public Node pop() throws Exception {
         Node tmpPopNode = head; //zmienna pomocnicza po to żeby ustawić wartość heada na następna czyli getNext
-        head = head.getNext();
-        size--;
-        tmpPopNode.setNext(null);//odcięcie zmiennej pomocniczej od całej kolejki
-        return tmpPopNode;
+        if (tmpPopNode != null) {
+            head = head.getNext();
+            size--;
+            tmpPopNode.setNext(null);//odcięcie zmiennej pomocniczej od całej kolejki
+            return tmpPopNode;
+        } else
+            //w przypadku gdy nie ma więcej elementów w kolejce zwróc błąd:
+            throw new Exception("Nie ma więcej elementów w kolejce");
     }
 
     public int getSize() {

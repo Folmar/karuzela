@@ -4,12 +4,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         menu();
 
     }
 
-    public static void menu() {
+    public static void menu() throws Exception {
         Scanner scanner = new Scanner(System.in);
         FifoQueue fifoQueue = new FifoQueue();
         while (true) {
